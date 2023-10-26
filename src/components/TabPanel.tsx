@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Tabs, AppBar, Tab, Typography} from "@mui/material";
+import {Tabs, AppBar, Tab} from "@mui/material";
 
 interface TabContainerProps {
   id: number;
@@ -26,7 +26,7 @@ const SimpleTabs = () => {
 
   return (
     <div>
-      <AppBar position="static">
+      {/*<AppBar position="static" >*/}
         <Tabs value={value} onChange={handleChange} className="tabs-costum">
           <Tab label="Forest"/>
           <Tab label="Desert"/>
@@ -34,7 +34,7 @@ const SimpleTabs = () => {
           <Tab label="Radiation zone"/>
           <Tab label="Snow terrain"/>
         </Tabs>
-      </AppBar>
+      {/*</AppBar>*/}
       {value === 0 && <TabContainer id={1}><img src="/images/terrains1.png" alt="" width="100%"/></TabContainer>}
       {value === 1 && <TabContainer id={2}><img src="/images/Terrains2.png" alt="" width="100%"/></TabContainer>}
       {value === 2 && <TabContainer id={3}><img src="/images/terrains1.png" alt="" width="100%"/></TabContainer>}
